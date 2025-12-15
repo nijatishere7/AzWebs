@@ -65,10 +65,12 @@ body {
 
 .navbar {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  padding: 12px 0;
-  position: sticky;
+  position: fixed;
   left: 0;
   top: 0;
+  z-index: 11;
+  width: 100%;
+  background-color: #fff;
 }
 
 .navbar__container {
@@ -81,13 +83,13 @@ body {
 
 .nav__right {
   display: flex;
-  gap: 24px;
   align-items: center;
 }
 
 .nav__logo {
   font-size: 32px;
   font-weight: 600;
+  color: blue;
 }
 
 .nav__logo__span {
@@ -100,18 +102,33 @@ body {
   font-size: 18px;
   font-weight: 500;
   color: #000;
+  padding: 20px;
+  transition: 0.8 ease all;
+}
+
+.nav__link:hover {
+  color: red;
+  transition: 0.8 ease all;
 }
 
 .nav__link__contact {
-  padding: 8px 16px;
+  padding: 8px 20px;
   background-color: green;
   color: #fff;
   border-radius: 4px;
+  margin-left: 8px;
+  transition: 0.8 ease all;
+}
+
+.nav__link__contact:hover {
+  background-color: rgb(34, 164, 34);
+  transition: 0.8 ease all;
 }
 
 .hero__img {
   border-radius: 8px;
   width: 800px;
+  cursor: pointer;
 }
 
 .hero__container {
@@ -120,7 +137,7 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1440px;
-  height: 92vh;
+  height: 100vh;
 }
 
 .hero__title {
@@ -152,23 +169,516 @@ body {
 }
 
 .hero__btn1 {
-  padding: 6px 18px;
+  padding: 8px 18px;
   color: #fff;
   background-color: green;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Poppins;
   border-radius: 4px;
   letter-spacing: 1px;
+  transition: 0.8 ease all;
+  font-weight: 600;
+}
+
+.hero__btn1:hover {
+  background-color: rgb(34, 164, 34);
 }
 
 .hero__btn2 {
-  padding: 6px 18px;
+  padding: 8px 18px;
   color: #fff;
   background-color: darkgoldenrod;
   font-family: Poppins;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 4px;
   letter-spacing: 1px;
+  transition: 0.8 ease all;
+  font-weight: 600;
+}
+
+.hero__btn2:hover {
+  background-color: rgb(211, 161, 36);
+  transition: 0.8 ease all;
+}
+
+.portfolio__container {
+  margin: 0 auto;
+  max-width: 1440px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.portfolio__cards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  gap: 30px;
+}
+
+.portfolio__card__title {
+  padding: 80px 120px;
+  background-color: #eae0e0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.portfolio__title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.portfolio__title__span {
+  color: blue;
+}
+
+.portfolio__title__span2 {
+  color: green;
+}
+
+.portfolio__card__name {
+  font-size: 24px;
+  padding-top: 12px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+}
+
+.portfolio__card {
+  padding-top: 20px;
+}
+
+.portfolio__card__subtitle {
+  padding-left: 8px;
+}
+
+/* .portfolio__card__subtitle {
+  background-color: #eae0e0;
+  border-radius: 4px;
+  padding: 2px 4px;
+  width: 130px;
+} */
+
+.xidmetler__title {
+  text-align: center;
+  font-size: 42px;
+  padding-top: 40px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.xidmetler__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.xidmet__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eae0e0;
+  padding: 40px 80px;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+.xidmet__card__img {
+  width: 40px;
+}
+
+.xidmet__card__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.xidmet__card__title {
+  font-size: 24px;
+}
+
+.xidmet__card__btn {
+  border: none;
+  border-radius: 4px;
+  background-color: green;
+  padding: 12px 20px;
+  font-family: Poppins;
+  color: #fff;
+  transition: 0.8 ease all;
+  font-weight: 600;
+}
+
+.xidmet__card__btn:hover {
+  background-color: rgb(34, 164, 34);
+  transition: 0.8 ease all;
+}
+
+.haqqimizda__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.haqqimizda__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.haqqimizda__card__btn {
+  border: none;
+  border-radius: 8px;
+  background-color: green;
+  padding: 12px 20px;
+  color: #fff;
+  font-family: Poppins;
+  transition: 0.8 ease all;
+  font-weight: 600;
+}
+
+.haqqimizda__card__btn:hover {
+  background-color: rgb(34, 164, 34);
+  transition: 0.8 ease all;
+}
+
+.haqqimizda__card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: center;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.fa-user {
+  font-size: 56px;
+  background-color: #eae0e0;
+  padding: 28px;
+  border-radius: 50%;
+}
+
+.haqqimizda__card__name {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.haqqimizda__card__info {
+  padding-bottom: 40px;
+}
+
+.haqqimizda__title {
+  font-size: 42px;
+  padding-top: 200px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.bloq__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.bloq__cards {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.bloq__card {
+  padding: 30px;
+  background-color: #eae0e0;
+  border-radius: 8px;
+}
+
+.bloq__card__title {
+  font-size: 24px;
+  padding-bottom: 12px;
+}
+
+.bloq__title {
+  text-align: center;
+  font-size: 42px;
+  padding-top: 120px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.elaqe__title {
+  text-align: center;
+  font-size: 42px;
+  padding-bottom: 80px;
+  padding-top: 120px;
+}
+
+.elaqe__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.elaqe__left__title {
+  padding: 12px 0;
+}
+
+.p-top0 {
+  padding-top: 0;
+}
+
+.elaqe__left__right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input {
+  display: flex;
+  gap: 12px;
+}
+
+.fa-brands {
+  padding-right: 12px;
+}
+
+.elaqe__input {
+  font-family: Poppins;
+  font-size: 18px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.elaqe__input__title {
+  font-size: 24px;
+  width: 380px;
+  font-weight: 500;
+}
+
+.elaqe__message__input {
+  width: 100%;
+  font-family: Poppins;
+  font-size: 18px;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 60px;
+  border-radius: 8px;
+  border: none;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+}
+
+.elaqe__btn {
+  padding: 12px 28px;
+  background-color: rgb(87, 87, 237);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: Poppins;
+  margin-top: 28px;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.8 ease all;
+}
+
+.elaqe__btn:hover {
+  background-color: rgb(149, 149, 235);
+  transition: 0.8 ease all;
+}
+
+.footer {
+  background-color: #eae0e0;
+  color: #000;
+  padding: 60px 0 20px;
+  font-family: Poppins;
+  margin-top: 40px;
+}
+
+.footer__container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer__brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer__brand h2 {
+  margin-bottom: 12px;
+}
+
+.footer__brand p {
+  color: #000;
+  line-height: 1.6;
+}
+
+.footer__links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer__links h3 {
+  margin-bottom: 12px;
+}
+
+.footer__links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links li {
+  margin-bottom: 8px;
+}
+
+.footer__links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  opacity: 0.6;
+}
+
+.footer__contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer__contact h3 {
+  margin-bottom: 12px;
+}
+
+.footer__contact p {
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.footer__socials {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer__socials a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer__socials a:hover {
+  opacity: 0.6;
+}
+
+.footer__bottom {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .nav__right {
+    display: none;
+  }
+  .hero__container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 120px 20px 40px;
+  }
+  .hero__img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 40px;
+  }
+  .hero__btns {
+    justify-content: center;
+  }
+  .portfolio__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .xidmet__card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 30px;
+  }
+  .xidmet__card__left {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .haqqimizda__cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bloq__cards {
+    grid-template-columns: 1fr;
+  }
+  .elaqe__left__right {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .form__input {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elaqe__input__title {
+    width: 100%;
+    font-size: 18px;
+    white-space: normal;
+  }
+
+  .elaqe__input,
+  .elaqe__message__input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .footer__socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio__cards {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 28px !important;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
