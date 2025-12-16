@@ -63,6 +63,8 @@ body {
   font-family: Poppins;
 }
 
+
+
 .navbar {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   position: fixed;
@@ -95,7 +97,7 @@ body {
 .nav__logo__span {
   font-size: 32px;
   font-weight: 600;
-  color: green;
+  color:  green;
 }
 
 .nav__link {
